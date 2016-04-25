@@ -1,2 +1,2 @@
 # linkman
-linkman links all the stuff
+links stuff
