@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "strict": "off",
+    "no-trailing-spaces": ["error"],
+    "no-multiple-empty-lines": ["error", { "max": 2 }],
+    "func-style": ["error", "declaration"]
+  }
+}
