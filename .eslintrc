@@ -3,13 +3,15 @@
   "extends": "eslint:recommended",
   "env": {
     "browser": true,
-    "node": true,
-    "es6": true
+    "es6": true,
+    "node": true
   },
   "rules": {
-    "strict": "off",
-    "no-trailing-spaces": ["error"],
+    "func-style": ["error", "declaration"],
     "no-multiple-empty-lines": ["error", { "max": 2 }],
-    "func-style": ["error", "declaration"]
+    "no-trailing-spaces": ["error"],
+    "no-unexpected-multiline": ["error"],
+    "semi": ["error", "never"],
+    "strict": "off"
   }
 }
