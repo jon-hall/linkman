@@ -11,16 +11,16 @@ export default function promisify(fn, n = fn.length - 1) {
         return new Promise((resolve, reject) => {
             function handler(err, result) {
                 if(err) {
-                    return reject(err);
+                    return reject(err)
                 }
 
-                resolve(result);
+                resolve(result)
             }
 
             // Insert our callback argument
-            args.splice(Math.min(n, args.length), 0, handler);
+            args.splice(Math.min(n, args.length), 0, handler)
 
-            fn.apply(this, args);
-        });
+            fn.apply(this, args)
+        })
     }
 }
