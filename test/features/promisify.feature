@@ -26,3 +26,11 @@ Feature: Promisify
         And we call the promisified function
         Then we should get back a Promise
         And the promise should be resolved with "5"
+
+    Scenario: Defaults to treating last argument as callback
+        Given we promisify a function
+        When that function takes "2" arguments
+        And the function returns "5" to the callback
+        And we call the promisified function with "1" argument
+        Then we should get back a Promise
+        And the promise should be resolved with "5"

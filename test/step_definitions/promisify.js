@@ -22,6 +22,9 @@ export default function() {
     })
 
     this.When(/^we call the promisified function(?: with "([^"]*)" arguments?)?$/, (args_count) => {
+        // Default cb index to last arg
+        this.cb_index = this.cb_index === undefined ? this.arg_count - 1 : this.cb_index
+
         // Here's where it all goes down - make a function with the right # of args, and make sure
         // the correct one is labelled 'cb', give it a body which errors or succeeds with the value
         // which has been setup
